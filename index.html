@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi primer HTML - Página principal</title>
+    <!-- Tailwind CDN: Permite usar clases de TailwindCSS sin instalar nada -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800 font-sans p-6">
+    <!-- Título principal de la página -->
+    <h1 class="text-4xl font-bold mb-6 text-center text-blue-700">
+      Mi página HTML completa
+    </h1>
+
+    <!-- Título secundario con enlace a TailwindCSS -->
+    <h2 class="text-2xl font-bold mb-6 text-left text-black">
+      Los estilos están hechos con
+      <a
+        href="https://tailwindcss.com"
+        class="text-blue-600 underline hover:text-blue-800"
+      >
+        TailwindCSS
+      </a>
+    </h2>
+
+    <!-- ===================== CHECKLIST ===================== -->
+    <h2 class="text-2xl font-semibold mb-3">Checklist de aprendizaje</h2>
+    <ul class="mb-6 space-y-2">
+      <!-- Cada ítem de checklist con checkbox -->
+      <li class="flex items-center space-x-2">
+        <input type="checkbox"  class="w-5 h-5 text-green-500" />
+        <span>Párrafos</span>
+      </li>
+      <li class="flex items-center space-x-2">
+        <input type="checkbox"  class="w-5 h-5 text-green-500" />
+        <span>Imágenes</span>
+      </li>
+      <li class="flex items-center space-x-2">
+        <input type="checkbox"  class="w-5 h-5 text-green-500" />
+        <span>Enlaces</span>
+      </li>
+      <li class="flex items-center space-x-2">
+        <input type="checkbox" class="w-5 h-5 text-green-500" />
+        <span>Formularios</span>
+      </li>
+      <li class="flex items-center space-x-2">
+        <input type="checkbox" class="w-5 h-5 text-green-500" />
+        <span>Tablas</span>
+      </li>
+    </ul>
+
+    <!-- ===================== RADIO BUTTON ===================== -->
+    <h2 class="text-2xl font-semibold mb-3">Selecciona una opción</h2>
+    <!-- Cada radio button debe compartir el mismo "name" para ser exclusivo -->
+    <label class="flex items-center space-x-2">
+      <input type="radio" name="opcion-radio" class="w-4 h-4 text-blue-500" />
+      <span>Opción 1</span>
+    </label>
+    <label class="flex items-center space-x-2">
+      <input type="radio" name="opcion-radio" class="w-4 h-4 text-blue-500" />
+      <span>Opción 2</span>
+    </label>
+
+    <!-- ===================== SELECT ===================== -->
+    <h2 class="text-2xl font-semibold mb-3">Selecciona una opción del menú</h2>
+    <label for="opciones" class="block mb-2 font-medium">Opciones:</label>
+    <select id="opciones" class="border border-gray-400 px-3 py-2 rounded">
+      <option value="1">Opción 1</option>
+      <option value="2">Opción 2</option>
+      <option value="3">Opción 3</option>
+    </select>
+
+    <!-- ===================== TABLA ===================== -->
+    <h2 class="text-2xl font-semibold mb-3 mt-6">Tabla de ejemplo</h2>
+    <table
+      class="table-auto border-collapse border border-gray-400 w-full mb-6"
+    >
+      <!-- Encabezado de la tabla -->
+      <thead class="bg-blue-200">
+        <tr>
+          <th class="border border-gray-400 px-4 py-2">Nombre</th>
+          <th class="border border-gray-400 px-4 py-2">Edad</th>
+          <th class="border border-gray-400 px-4 py-2">Curso</th>
+        </tr>
+      </thead>
+      <!-- Cuerpo de la tabla -->
+      <tbody>
+        <tr class="bg-white">
+          <td class="border border-gray-400 px-4 py-2">Juan</td>
+          <td class="border border-gray-400 px-4 py-2">25</td>
+          <td class="border border-gray-400 px-4 py-2">HTML Básico</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border border-gray-400 px-4 py-2">María</td>
+          <td class="border border-gray-400 px-4 py-2">30</td>
+          <td class="border border-gray-400 px-4 py-2">CSS Básico</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ===================== ENLACE AL FORMULARIO ===================== -->
+    <h2 class="text-2xl font-semibold mb-3">Formulario</h2>
+    <p class="mb-6">
+      Rellena tu información en la
+      <a
+        href="form.html"
+        class="text-blue-600 hover:text-blue-800 font-semibold underline"
+      >
+        página del formulario </a
+      >.
+    </p>
+  </body>
+</html>

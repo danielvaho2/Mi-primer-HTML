@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de contacto</title>
+    <!-- Tailwind CDN: permite usar clases TailwindCSS directamente sin instalación -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="bg-gray-100 text-gray-800 font-sans p-6 flex flex-col items-center"
+  >
+    <!-- ===================== Título del formulario ===================== -->
+    <h1 class="text-4xl font-bold mb-6 text-blue-700">
+      Formulario de contacto
+    </h1>
+
+    <!-- ===================== FORMULARIO ===================== -->
+    <!--
+    action="#" → indica a dónde se enviará la información (actualmente no hace nada)
+    method="post" → envía los datos de forma segura en el cuerpo de la petición
+    class="..." → clases Tailwind para diseño (fondo blanco, padding, borde redondeado, sombra, ancho máximo)
+  -->
+    <form
+      action="#"
+      method="post"
+      class="bg-white p-6 rounded shadow-md w-full max-w-md space-y-4"
+    >
+      <!-- Campo de nombre -->
+      <div>
+        <!-- Clases Tailwind:
+             w-full → ocupa todo el ancho disponible
+             border, border-gray-300 → borde gris
+             rounded → bordes redondeados
+             p-2 → padding interno
+             focus:outline-none focus:ring-2 focus:ring-blue-500 → resalta al hacer clic -->
+        <label for="nombre" class="block font-semibold mb-1">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          required
+          class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <!-- Campo de correo electrónico -->
+      <div>
+        <label for="email" class="block font-semibold mb-1">Correo:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <!-- Campo de mensaje -->
+      <div>
+        <label for="mensaje" class="block font-semibold mb-1">Mensaje:</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          required
+          class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
+      </div>
+
+      <!-- Botón de envío -->
+      <!-- Clases Tailwind:
+           bg-blue-600 → fondo azul
+           text-white → texto blanco
+           font-semibold → letra semi-negrita
+           px-4 py-2 → padding horizontal y vertical
+           rounded → bordes redondeados
+           hover:bg-blue-700 → cambia color al pasar el mouse
+           transition → animación suave al cambiar  -->
+      <button
+        type="submit"
+        class="bg-blue-600 text-white font-semibold px-4 py-2 rounded hover:bg-blue-700 transition"
+      >
+        Enviar
+      </button>
+    </form>
+
+    <!-- Enlace para volver a la página principal -->
+    <p class="mt-4">
+      <a href="index.html" class="text-blue-600 hover:text-blue-800 underline">
+        Volver a la página principal
+      </a>
+    </p>
+  </body>
+</html>
